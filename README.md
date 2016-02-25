@@ -1,26 +1,18 @@
 # Ember-search-bar
 
-This README outlines the details of collaborating on this Ember addon.
-
+An ember addon to display a searchbar
 ## Installation
+`ember install git+ssh://git@git.tenforce.com:ember/search-bar.git`
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+## Usage
+```{{search-bar search=search}}```
 
-## Running
+Search is an action that is triggered when a search query is entered or removed.
+to handle the action add the following to your controller/component:
 
-* `ember server`
-* Visit your app at http://localhost:4200.
-
-## Running Tests
-
-* `npm test` (Runs `ember try:testall` to test your addon against multiple Ember versions)
-* `ember test`
-* `ember test --server`
-
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).
+```
+actions:
+  search: (query) ->
+     @store.find('post', title: query).then (results) =>
+       #do something with results
+```
