@@ -1,4 +1,4 @@
-{{input value=searchString key-press="updateSearchString" placeholder='Search...' type='text'}}
+{{input value=searchString key-up="updateSearchString" placeholder='Search...' type='text'}}
 {{#if searchString}}
 			<span {{action 'cancelSearch'}}><i class="fa fa-times"></i></span>
 {{/if}}
