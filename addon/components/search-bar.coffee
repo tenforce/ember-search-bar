@@ -11,6 +11,6 @@ SearchBarComponent = Ember.Component.extend
       @set 'searchString', null
       @sendAction('search',@get('searchString'))      
     updateSearchString: ->
-      Ember.run.debounce this, @submitSearch  , 100
+      Ember.run.debounce this, @submitSearch  , 500
 
 `export default SearchBarComponent`
