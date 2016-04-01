@@ -4,6 +4,7 @@
 SearchBarComponent = Ember.Component.extend
   layout: layout
   classNames: ["search"]
+  placeholder: 'Search...'
   submitSearch: ->
     @sendAction('search',@get('searchString'))
   actions:
