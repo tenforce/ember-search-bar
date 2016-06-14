@@ -1,6 +1,6 @@
 {{input value=searchString key-up="updateSearchString" placeholder=placeholder type='text'}}
 {{#if searchString}}
-			<span class="cancelicon" {{action 'cancelSearch'}}><i class="fa fa-times"></i></span>
+			<span class="cancelicon" {{action 'cancelSearch'}}><i class="fa {{cancelClass}}"></i></span>
 {{/if}}
 <span class="searchicon">
   <i class="fa fa-search"></i>
