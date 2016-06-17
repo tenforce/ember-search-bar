@@ -10,8 +10,7 @@ SearchBarComponent = Ember.Component.extend
     @sendAction('search',@get('searchString'))
   actions:
     cancelSearch: ->
-      @set 'searchString', null
-      @sendAction('search',@get('searchString'))      
+      @sendAction('cancelSearch',@get('searchString'))
     updateSearchString: ->
       Ember.run.debounce this, @submitSearch  , 500
 
